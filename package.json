@@ -1,0 +1,14 @@
+{
+  "name": "sasstutorial",
+  "version": "1.0.0",
+  "description": "learning purpose only",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "mahinder kumar",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

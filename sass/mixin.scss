@@ -1,0 +1,19 @@
+// @mixin in sass
+@mixin commoncolumn{
+    background-color: red;
+    padding: 10px;
+    color: #fff;
+    margin: 10px 0;
+ }
+ // define mixin with two arguments
+@mixin bordered($color, $width){
+    border: $width solid $color;
+ }
+ 
+ // mixin for vender prefixes
+ @mixin transfoem($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+ }
+ 
