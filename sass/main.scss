@@ -1,55 +1,53 @@
-@import 'variable';
-@import 'mixin';
-@import 'nesting';
+@import "variable";
+@import "mixin";
+@import "nesting";
 
-body{
-   background: $bgcolor;
+body {
+  background: $bgcolor;
 }
-h1{
-   color: $color_blue;
-   font-size: 150px;
-   text-transform: uppercase;
-} 
-
-
-
-
-.col-1, .col-2, .col-3{
-   @include commoncolumn;
+h1 {
+  color: $color_blue;
+  font-size: 150px;
+  text-transform: uppercase;
 }
-.heading{
-   @include bordered(red,1px ) // call mixin with two value
+.col-1,
+.col-2,
+.col-3 {
+  @include commoncolumn;
 }
-.heading2{
-   @include bordered(blue,4px ) // call mixin with two value
+.heading {
+  @include bordered($bg_red, 1px) // call mixin with two value;
 }
- 
-.abc{
-   @include transfoem(translate(-50%));
-}
-.button-basic{
-   padding: 10px 15px;
-   font-size: 14px;
-   background: red;
-   color: #fff;
-   display: inline-block;
-   margin-right: 10px;
+.heading2 {
+  @include bordered($text-blue, 4px) // call mixin with two value;
 }
 
-.button-report{
-   @extend .button-basic;
-   background: blue;
+.abc {
+  @include transfoem(translate(-50%));
 }
-.button-submit{
-   @extend .button-basic;
-   background: black;
+.button-basic {
+  padding: 10px 15px;
+  font-size: 14px;
+  background: $bg_red;
+  color: #fff;
+  display: inline-block;
+  margin-right: 10px;
 }
-h4{
-   background-color: aqua;
-   display: flex;
+
+.button-report {
+  @extend .button-basic;
+  background: $text-blue;
+}
+.button-submit {
+  @extend .button-basic;
+  background: $text-blue;
+}
+h4 {
+  background-color: $text-blue;
+  display: flex;
 }
 .hello-one {
-   background-color: $hello-bg;
-   color: $text-color;
-   text-transform: $text-uppercase;
+  background-color: $hello-bg;
+  color: $text-color;
+  text-transform: $text-uppercase;
 }
