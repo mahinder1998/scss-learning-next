@@ -1,0 +1,20 @@
+// nesting sass
+.navigation{
+    background: $bg_yellow;
+    padding: 10px;
+    ul{
+       li{
+          list-style: none;
+          display: inline-block;
+          a{
+             display: inline-block;
+             padding: 0 10px;
+             color: $bg_red;
+             text-decoration: none;
+             &:hover{
+                color: white;
+             }
+          }
+       }
+    }
+ }

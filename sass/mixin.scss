@@ -5,6 +5,7 @@
     color: #fff;
     margin: 10px 0;
  }
+ 
  // define mixin with two arguments
 @mixin bordered($color, $width){
     border: $width solid $color;

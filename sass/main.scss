@@ -1,14 +1,10 @@
 @import 'variable';
 @import 'mixin';
-
-
-
+@import 'nesting';
 
 body{
    background: $bgcolor;
 }
-
-
 h1{
    color: $color_blue;
    font-size: 150px;
@@ -17,31 +13,10 @@ h1{
 
 
 
-// nesting sass
-.navigation{
-   background: $bg_yellow;
-   padding: 10px;
-   ul{
-      li{
-         list-style: none;
-         display: inline-block;
-         a{
-            display: inline-block;
-            padding: 0 10px;
-            color: $bg_red;
-            text-decoration: none;
-            &:hover{
-               color: white;
-            }
-         }
-      }
-   }
-}
 
 .col-1, .col-2, .col-3{
    @include commoncolumn;
 }
-
 .heading{
    @include bordered(red,1px ) // call mixin with two value
 }
@@ -49,13 +24,9 @@ h1{
    @include bordered(blue,4px ) // call mixin with two value
 }
  
-
-
 .abc{
    @include transfoem(translate(-50%));
 }
-
-
 .button-basic{
    padding: 10px 15px;
    font-size: 14px;
@@ -73,8 +44,6 @@ h1{
    @extend .button-basic;
    background: black;
 }
-
-
 h4{
    background-color: aqua;
    display: flex;
